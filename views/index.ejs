@@ -12,13 +12,16 @@
     </header>
     
     <div class="row text-center" style="display:flex; flex-wrap:wrap;">
-        <% campgrounds.forEach(function(campgrounds){ %>
+        <% allCampgrounds.forEach(function(campgrounds){ %>
             <div class="col-mid-3 col-sm-6">
                 <div class="thumbnail">
                     <image src="<%= campgrounds.image %>">
                     <div class="caption">
                         <h4><%= campgrounds.name %></h4>
                     </div>
+                    <p>
+                        <a href="/campgrounds/<%= campgrounds._id %>" ckass="btn btn-primary">More Info</a>
+                    </p>
                 </div>
             </div>
         <% }) %>
